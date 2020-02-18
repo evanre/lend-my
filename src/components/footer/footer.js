@@ -8,9 +8,9 @@ import Link from '@material-ui/core/Link';
 function BuiltWithLove() {
   return (
     <Typography variant="body1">
-      {'Built with ❤️ on '}
+      Built with <span aria-label="love" role="img">❤️</span> on
       <Link color="inherit" href="https://reactjs.org/" target="_blank">React</Link>
-      {' & '}
+      &
       <Link color="inherit" href="https://material-ui.com/" target="_blank">Material-UI</Link>
     </Typography>
   );

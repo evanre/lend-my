@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import Header from '../header';
-import Footer from '../footer';
 import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
-import withRoot from './withRoot';
 
-const styles = (theme) => ({
+import withRoot from '../../tools/withRoot';
+import Header from '../header';
+import Footer from '../footer';
+import List from '../list';
+
+const styles = () => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
@@ -14,16 +16,15 @@ const styles = (theme) => ({
 });
 
 class App extends Component {
-
   render() {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <Header className={classes.header} />
-        <Container className={classes.main} component="main" maxWidth="md">
-          <p>Content goes here</p>
+        <Header/>
+        <Container component="main" maxWidth="md">
+          <List/>
         </Container>
-        <Footer className={classes.footer} />
+        <Footer/>
       </div>
     );
   }

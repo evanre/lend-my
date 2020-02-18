@@ -5,7 +5,7 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
-  toolbar: {
+  container: {
     padding: theme.spacing(3, 2),
     textAlign: 'center',
   },
@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <AppBar component="header" position="static">
-        <Container className={classes.toolbar} maxWidth="md">
+        <Container className={classes.container} maxWidth="md">
           <Typography variant="h5" component="h1">Books that I have lent to my friends</Typography>
         </Container>
     </AppBar>
